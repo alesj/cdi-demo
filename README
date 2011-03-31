@@ -1,0 +1,3 @@
+Simple CDI/Weld bootstrap project.
+It uses Weld Arquillian container to test things.
+
