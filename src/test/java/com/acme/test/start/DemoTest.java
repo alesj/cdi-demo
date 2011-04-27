@@ -23,7 +23,7 @@ public class DemoTest
    {
       JavaArchive archive = ShrinkWrap.create(JavaArchive.class)
             .addPackage(DemoTest.class.getPackage())
-            .addResource(EmptyAsset.INSTANCE, "META-INF/beans.xml");
+            .addAsResource(EmptyAsset.INSTANCE, "META-INF/beans.xml");
       System.out.println("archive = " + archive.toString(true));
       return archive;
    }
