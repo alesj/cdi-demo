@@ -75,11 +75,11 @@ public class SplitInterceptorsTest
       TxInterceptor.used = false;
       Client c = new Client();
       Assert.assertTrue(cdao.save(c));
-      Assert.assertTrue(TxInterceptor.used);
+      Assert.assertTrue("ClientDAO interception", TxInterceptor.used);
 
       TxInterceptor.used = false;
       Enigma e = new Enigma();
       Assert.assertEquals(42, edao.solve(e));
-      Assert.assertTrue(TxInterceptor.used);
+      Assert.assertTrue("EnigmaDAO interception", TxInterceptor.used);
    }
 }
